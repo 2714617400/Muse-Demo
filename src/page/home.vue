@@ -19,8 +19,7 @@
     </mu-paper>
 
     <mu-paper class="demo-paper" :z-depth="1">
-      <span class="tit">青丝</span>
-      <span class="tit-s">青丝9</span>
+      <span class="tit">一缕青丝为君剪 一缕青丝缠绕君 望君不负我倾心 如若辜负 万劫不复</span>
       <img src="../assets/demo1.jpg" />
       <p>一缕青丝一缕魂，一缕悲切一缕尘，一缕青丝为君剪，一缕青丝缠君魂，一缕青丝 一缕魂 红锦系命送爱人。 </p>
     </mu-paper>
@@ -54,14 +53,9 @@ h1 {
   max-width: 1200px;
   margin: 3% auto;
   box-sizing: border-box;
+  overflow: hidden;
   .tit {
-    font-size: 2.5rem;
-    padding: 3%;
-  }
-  .tit-s {
-    font-size: 2.5rem;
-    padding: 3%;
-    font-family: "Roboto";
+    font-size: 2.0rem;
   }
   img {
     width: 100%;

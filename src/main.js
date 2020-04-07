@@ -6,6 +6,8 @@ import router from './router'
 import MuseUI from 'muse-ui'
 import Helpers from 'muse-ui/lib/Helpers'
 import 'muse-ui/dist/muse-ui.css'
+import 'typeface-roboto'
+import './assets/font_icon/material-icons.css'
 
 Vue.config.productionTip = false
 

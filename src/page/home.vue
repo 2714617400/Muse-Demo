@@ -8,7 +8,9 @@
     <mu-paper class="demo-paper" :z-depth="1">
       <h1>好久不见，MASTER</h1>
       <mu-container class="button-wrapper">
-        <mu-button color="primary">Primary</mu-button>
+        <mu-tooltip content="主要按钮哦~">
+          <mu-button color="primary" @click="demo">Primary</mu-button>
+        </mu-tooltip>
         <mu-button color="secondary">Secondary</mu-button>
         <mu-button color="success">Success</mu-button>
         <mu-button color="warning">Warning</mu-button>
@@ -23,6 +25,25 @@
       <img src="../assets/demo1.jpg" />
       <p>一缕青丝一缕魂，一缕悲切一缕尘，一缕青丝为君剪，一缕青丝缠君魂，一缕青丝 一缕魂 红锦系命送爱人。 </p>
     </mu-paper>
+
+    <mu-paper class="demo-paper panel" :z-depth="1">
+      <mu-container>
+        <mu-expansion-panel>
+          <div slot="header">Panel 1</div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+          <mu-button slot="action" flat>Cancel</mu-button>
+          <mu-button slot="action" flat color="primary">Save</mu-button>
+        </mu-expansion-panel>
+        <mu-expansion-panel>
+          <div slot="header">Panel 2</div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+        </mu-expansion-panel>
+        <mu-expansion-panel>
+          <div slot="header">Panel 3</div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+        </mu-expansion-panel>
+      </mu-container>
+    </mu-paper>
   </div>
 </template>
 
@@ -31,6 +52,11 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    demo () {
+      this.$toast.message('hello world')
     }
   }
 }
@@ -42,6 +68,7 @@ h1 {
   font-size: 96px;
   font-weight: 300;
   padding-left: 30px;
+  font-family: 'shaonv';
 }
 .button-wrapper {
   text-align: center;
@@ -60,5 +87,8 @@ h1 {
   img {
     width: 100%;
   }
+}
+.panel {
+  padding: 50px 0;
 }
 </style>

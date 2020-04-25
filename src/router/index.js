@@ -11,6 +11,8 @@ const LayoutBottom = lazyLoad('layout/BottomNav') // 顶部一级导航栏
 
 const home = lazyLoad('home')
 
+const login = lazyLoad('login/login')
+
 export default new Router({
   routes: [
     {
@@ -28,6 +30,15 @@ export default new Router({
           component: home
         }
       ]
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: login,
+      meta: {
+        group: 'login',
+        first_level: 1
+      }
     }
   ]
 })

@@ -64,6 +64,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
+.hello {
+  overflow: hidden; // 解决子元素的margin-top重合问题，表现为顶开父元素与父元素相邻元素的间距
+}
 h1 {
   font-size: 96px;
   font-weight: 300;

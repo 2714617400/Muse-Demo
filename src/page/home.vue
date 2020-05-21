@@ -44,14 +44,30 @@
         </mu-expansion-panel>
       </mu-container>
     </mu-paper>
+
+    <mu-paper class="demo-paper panel" :z-depth="1">
+      <aplayer autoplay :music="myMusic"></aplayer>
+    </mu-paper>
   </div>
 </template>
 
 <script>
+import Aplayer from 'vue-aplayer'
 export default {
+  components: {
+    Aplayer
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      myMusic: {
+        title: 'secret base~君がくれたもの~',
+        artist: 'Silent Siren',
+        // src: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/hikarunara.mp3',
+        src: require('../assets/01.mp3'),
+        pic: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/hikarunara.jpg',
+        theme: 'pic'
+      }
     }
   },
   methods: {

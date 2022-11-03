@@ -20,6 +20,9 @@ const createLintingRule = () => ({
 })
 
 module.exports = {
+  externals: {
+    'materialdesignicons':'materialdesignicons'
+  },
   context: path.resolve(__dirname, '../'),
   entry: {
     app: './src/main.js'
